@@ -15,9 +15,14 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
+  sayWelcome(): string {
+    return 'Welcome to API';
+  }
+
+  @Get('/protected')
   @UseGuards(JwtAuthGuard)
-  getHello(): string {
-    return this.appService.getHello();
+  sayProtected(): string {
+    return 'Protected route';
   }
 
   @Post('calculate/:id')
