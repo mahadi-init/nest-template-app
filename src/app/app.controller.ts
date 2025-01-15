@@ -7,8 +7,8 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
+import { JwtAuthGuard } from '@/utils/jwt-auth.guard';
 import { AppService } from './app.service';
-import { JwtAuthGuard } from './utils/jwt-auth.guard';
 
 @Controller()
 export class AppController {
