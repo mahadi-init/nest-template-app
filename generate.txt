@@ -1,0 +1,3 @@
+nest generate module upload
+nest generate service upload
+nest generate controller upload
